@@ -4,7 +4,7 @@
 /**
  * main - prints the content exactly
  *
- * Return (0)
+ * Return: (0)
  */
 
 
