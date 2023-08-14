@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 /**
- * maiin - main function
+ * main - main function
  *
  * Return: 1
  */
