@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 /**
- *
  * main - Entry point
  * Description: 'print a;phabets in lower case'
  * Return: always 0
