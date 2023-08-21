@@ -1,12 +1,11 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * times_table - a function that prints nine times
- * Result: 0
+ * Return: 0
  */
 void times_table(void)
-}
+{
 	int i, j, k;
 
 	for (i = 0; i < 10; i++)
