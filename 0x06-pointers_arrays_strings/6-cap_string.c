@@ -3,7 +3,7 @@
 /**
  * cap_string - a funcrion that capitalises all words of a string
  * @str: the string to be capitalised
- * Return: a pointer to the string
+ * Return: a pointer to the changed string
  */
 char *cap_string(char *str)
 {
