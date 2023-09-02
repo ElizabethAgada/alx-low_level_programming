@@ -2,7 +2,7 @@
 
 /**
  * rev_string - reverse array
- * @n: integerparameter
+ * @n: integer parameter
  * Return: 0
  */
 void rev_string(char *n)
@@ -41,7 +41,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 
 	while (*(n1 + z) != '\0')
 		z++;
-	while (*(n1 + f) != '\0')
+	while (*(n2 + f) != '\0')
 		f++;
 	z--;
 	f--;
@@ -66,6 +66,8 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			return (0);
 		*(r + digits) = (temp_tot % 10) + '0';
 		digits++;
+		f--;
+		z--;
 	}
 	if (digits == size_r)
 		return (0);
