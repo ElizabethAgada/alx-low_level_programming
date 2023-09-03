@@ -29,7 +29,9 @@ void print_buffer(char *b, int size)
 			else
 				printf(" ");
 			if (f % 2)
+			{
 				printf(" ");
+			}
 		}
 		for (f = 0; f < m; f++)
 		{
@@ -45,4 +47,3 @@ void print_buffer(char *b, int size)
 		a += 10;
 	}
 }
-
