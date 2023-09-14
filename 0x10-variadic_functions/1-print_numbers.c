@@ -17,18 +17,14 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	for (p = 0; p < n; p++)
 	{
-		if (separator)
-			printf("%d", va_arg(list, int));
+		printf("%d", va_arg(list, int));
 
-		else if (separator && p != 0)
-			printf(" % d", va_arg(list, int));
-
-		else
-			printf("%s%d", separator, va_arg(list, int));
+		if (p != (n - 1) && separator != NULL)
+			printf("%s", separator);
 
 	}
 
-	va_end(list);
-
 	printf("\n");
+
+	va_end(list);
 }
