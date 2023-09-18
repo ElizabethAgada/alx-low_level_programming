@@ -3,7 +3,7 @@
 
 /**
  * free_dog - frees memory allocated for a struct dog
- * @d: struct dog to be freed
+ * @d: struct dog to be free
  */
 void free_dog(dog_t *d)
 {
