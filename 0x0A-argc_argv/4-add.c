@@ -17,13 +17,14 @@ int main(int argc, char *argv[])
 		for (q = 0; argv[p][q] != '\0'; q++)
 		{
 			if (!isdigit(argv[p][q]))
+			{
 				printf("Error\n");
-			return (1);
+				return (1);
+			}
 		}
+		add += atoi(argv[p]);
 	}
-	add += atoi(argv[p]);
 	printf("%d\n", add);
 	return (0);
 
 }
-
