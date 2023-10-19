@@ -4,7 +4,7 @@
  * create_file - the cresating of file
  * @filename: it points to the name of file to be created
  * @text_content: it points to the string to write to the file
- * Return: if function fails -1 otherwise 1
+ * Return: 1 on success otherwise -1
  */
 int create_file(const char *filename, char *text_content)
 {
@@ -18,8 +18,9 @@ int create_file(const char *filename, char *text_content)
 		for (joy = 0; text_content[joy];)
 			joy++;
 	}
+
 	love = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
-	peace = write(joy, text_content, joy);
+	peace = write(love, text_content, joy);
 
 	if (love == -1 || peace == -1)
 		return (-1);
