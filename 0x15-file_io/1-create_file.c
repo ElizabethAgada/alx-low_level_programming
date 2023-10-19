@@ -4,7 +4,7 @@
  * create_file - the cresating of file
  * @filename: it points to the name of file to be created
  * @text_content: it points to the string to write to the file
- * Return: if function fails --1 otherwise - 1
+ * Return: if function fails -1 otherwise 1
  */
 int create_file(const char *filename, char *text_content)
 {
