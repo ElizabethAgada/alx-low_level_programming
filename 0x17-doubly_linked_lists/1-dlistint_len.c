@@ -10,7 +10,7 @@ size_t dlistint_len(const dlistint_t *h)
 {
 	int zoo;
 
-	zoo = 0
+	zoo = 0;
 
 	if (h == NULL)
 		return (zoo);
