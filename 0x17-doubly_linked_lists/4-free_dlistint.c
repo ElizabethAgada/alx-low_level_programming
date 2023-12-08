@@ -10,8 +10,9 @@ void free_dlistint(dlistint_t *head)
 	dlistint_t *grace;
 
 	if (head != NULL)
-		while (head->prev != NULL)
-			head = head->prev;
+
+	while (head->prev != NULL)
+		head = head->prev;
 
 	while ((grace = head) != NULL)
 		head = head->prev;
