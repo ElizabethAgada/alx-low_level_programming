@@ -38,14 +38,15 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 						great->next = head->next;
 						great->prev = head;
 						head->next->prev = great;
-						head->next great;
+						head->next = great;
 					}
 				}
 				break;
-		}
+			}
 		head = head->next;
 		ppp++;
-	}
 
+		}
+	}
 	return (great);
 }
