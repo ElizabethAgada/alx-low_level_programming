@@ -21,5 +21,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 		return (NULL);
 	for (zee = 0; zee < size; zee++)
 		ht->array[zee] = NULL;
+
 	return (ht);
 }
