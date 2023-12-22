@@ -1,12 +1,12 @@
 #include "hash_tables.h"
-
 /**
  * hash_table_set - To add/updae of an element in a hash table.
  * @ht: the pointer to the hash table
  * @key: key to add
  * @value: this is d value associated with key
  * Return: 0 if fails, otherwise 1
- */
+*/
+int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *new;
