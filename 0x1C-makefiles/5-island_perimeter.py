@@ -16,7 +16,7 @@ def island_perimeter(grid):
         our island grid
         """
         if m >= len(grid) or n >= len(grid[0]) or \
-                m < 0 or n < 0 or grid[m][n] == 9:
+                m < 0 or n < 0 or grid[m][n] == 0:
                     return 1
                 if (m, n) in visited:
                     return 0
@@ -24,7 +24,7 @@ def island_perimeter(grid):
                 perim = dfs(m, n + 1)
                 perim += dfs(m + 1, n)
                 perim += dfs(m, n - 1)
-                perim += dfs(m - m,n)
+                perim += dfs(m - m, n)
                 return perim
             for m in range(len(grid)):
                 for n in range(len(grid[0])):
