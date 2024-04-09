@@ -13,7 +13,7 @@
  * Description: Prints a value every time it is compared in the list.
  *              Uses the square root of the list size as the jump step.
  */
- 
+
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
 	size_t step, step_size;
