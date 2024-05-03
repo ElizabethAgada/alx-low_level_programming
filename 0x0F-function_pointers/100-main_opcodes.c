@@ -3,13 +3,13 @@
 
 /**
  * main - prints its own opcodes
- * @argc: number of arguements
- * @argv: array of arguements
- * Return: 0
+ * @argc: number of arguments
+ * @argv: array of arguments
+ * Return: Always 0 (Success)
  */
 int main(int argc, char *argv[])
 {
-	int bytes, q;
+	int bytes, i;
 	char *arr;
 
 	if (argc != 2)
@@ -18,23 +18,20 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 	bytes = atoi(argv[1]);
-
 	if (bytes < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
-
 	arr = (char *)main;
-
-	for (q = 0; q < bytes; q++)
+	for (i = 0; i < bytes; i++)
 	{
-		if (q == bytes - 1)
+		if (i == bytes - 1)
 		{
-			printf("%02hhx\n", arr[q]);
+			printf("%02hhx\n", arr[i]);
 			break;
 		}
-		printf("%02hhx", arr[q]);
+		printf("%02hhx ", arr[i]);
 	}
 	return (0);
 }
