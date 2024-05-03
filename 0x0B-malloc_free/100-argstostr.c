@@ -1,45 +1,46 @@
 #include "main.h"
 #include <stdlib.h>
 #include <string.h>
-
 /**
- * argstostr - concatenates all the arguments of your program
- * @ac: number of arguements
- * @av: arrau of arguements
- * Return: pointer to the new string or NULL
+ * argstostr - concatenates all the argument of your program
+ * @ac: input integer
+ * @av: input char
+ * Return: NULL if ac == 0 or av == NULL
  */
 char *argstostr(int ac, char **av)
 {
-	int a, b, c, len;
-
-	char *str;
+	int i, total_len, curr_posit;
+	char *result;
 
 	if (ac == 0 || av == NULL)
-		return (NULL);
-
-	for (a = 0; a < ac; a++)
 	{
-		for (b = 0; av[a][b] != '\0'; b++)
-			len++;
-		len++;
+		return (NULL);
 	}
+	total_len = 0;
 
-	str = malloc(sizeof(char) * (len + 1));
-
-	if (str == NULL)
-		return (NULL);
-
-	c = 0;
-
-	for (a = 0; a < ac; a++)
+	for (i = 0; i < ac; i++)
 	{
-		for (b = 0; av[a][b] != '\0'; b++)
+		if (av[i] != NULL)
 		{
-			str[c] = av[a][b];
-			c++;
+			total_len += strlen(av[i]) + 1;
 		}
-		str[c] = '\n';
-		c++;
 	}
-	return (str);
+	result = (char *)malloc(total_len + 1);
+	if (result == NULL)
+	{
+		return (NULL);
+	}
+	curr_posit = 0;
+	for (i = 0; i < ac; i++)
+	{
+		if (av[i] != NULL)
+		{
+			strcpy(result + curr_posit, av[i]);
+			curr_posit += strlen(av[i]);
+			result[curr_posit] = '\n';
+			curr_posit++;
+		}
+	}
+	result[total_len] = '\0';
+	return (result);
 }
