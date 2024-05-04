@@ -1,14 +1,10 @@
 #!/bin/bash
 
-# Compile each .c file into an object file
-for file in *.c; do
-    if [ -f "$file" ]; then
-        gcc -c -fPIC "$file" -o "${file%.c}.o"
-    fi
-done
+# Compile all .c files in the current directory
+gcc -Wall -pedantic -Werror -Wextra -fPIC -c *.c
 
-# Create the dynamic library from the object files
+# Create the shared library
 gcc -shared -o liball.so *.o
 
-# Clean up the temporary object files
+# Clean up - remove the object files
 rm *.o
